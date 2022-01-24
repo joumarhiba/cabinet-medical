@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+.heading2 {
+  text-align: center;
+  font-size: 36px;
+  color: #425AE5;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  font-family: inherit;
+}
+
+@media screen and (max-width: 750px) {
+  .heading2 {
+    font-size: 23px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+h1 {
+  font-size: 1.7rem !important;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right top, from(#3181dc), to(#425ae5));
+  background: linear-gradient(90deg, #3181dc 0%, #425ae5 100%);
+  height: 100vh;
+}
+
+.login {
+  background-color: #ffffff;
+  width: 300px;
+  margin: auto;
+  padding: 10px 0px 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 47px -10px black;
+          box-shadow: 0px 0px 47px -10px black;
+}
+
+.login form {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+}
+
+.login form input {
+  height: 25px;
+  color: #828282;
+  font-size: 1.1em;
+  border-radius: 10px;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+.login form input:focus {
+  border: 1px solid #4A90DF;
+}
+
+.login form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #3181DC;
+}
+
+.login form label .fas {
+  color: inherit !important;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.login form input[type="submit"] {
+  width: 130px;
+  height: 30px;
+  border: none;
+  border-radius: 13px;
+  background-color: #3181dc;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.1rem !important;
+  }
+  .login {
+    width: 275px;
+    height: 49%;
+  }
+  .login form input {
+    font-size: .9em;
+  }
+}
+/*# sourceMappingURL=login.css.map */

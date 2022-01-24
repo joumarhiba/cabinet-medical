@@ -1,0 +1,107 @@
+@import "./header";
+@import "./footer";
+@import 'variables';
+
+@include fontFamily;
+header {
+    background: $main-color-gradient;
+}
+.titre{
+    margin-top: 6%;
+    text-align: center;
+    color: $secondary-color;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.sous-titre{
+    text-align: center;
+    color: $font-color;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 3%;
+}
+.formulaire{
+    background-color: rgb(236, 239, 252) !important;
+    border-radius: 10px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 7%;
+    padding: 30px 0px 50px;
+    form{
+        width: 500px;
+        margin: auto;
+        #l-nom , #l-prenom , #l-email , #l-msg{
+            color: $secondary-color;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        #nom , #prenom , #email , #msg{
+            border: none;
+            border-bottom:1px solid $font-color ;
+            width: 100%;
+            padding: 5px 0;
+            background: rgb(236, 239, 252) !important;
+            margin-bottom: 4%;
+            font-size: small;
+        }
+        button{
+            background-color: $secondary-color;
+            color: $white;
+            border-radius: 10px;
+            width: 120px;
+            height: 30px;
+            border: none;
+            font-size: 0.7em;
+            font-weight: bold;
+            float: right;
+            cursor: pointer;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            &:hover{
+                transition: 0.7s ease;
+                background-color: $secondary-color;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+@media (max-width : 750px){
+    .titre{
+        font-size: 0.8em;
+    }
+    .sous-titre{
+        font-size: 0.4em;
+    }
+    .formulaire{
+        width: 320px;
+        width: 95%;
+        margin: auto;
+        form{
+            width: 80%;
+            #l-nom , #l-prenom , #l-email , #l-msg{
+                font-size: 0.5em;
+            }
+            button{
+                border-radius: 7px;
+                width: 100px;
+                font-size: 0.5em;
+                
+            }
+            #nom , #prenom , #email , #msg{
+                width: 100%;
+                padding: 1px 0;
+            }
+        }
+    }
+}
+@media (max-width : 450px){
+
+    .formulaire{
+       button{
+            border-radius: 7px;
+            width: 100px;
+            height: 36px;
+            font-size: 0.5em;
+
+        }
+    }
+}

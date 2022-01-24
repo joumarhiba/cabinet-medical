@@ -1,0 +1,8 @@
+@import 'variables';
+
+@include fontFamily;
+@include h2;
+body{
+  background-color: $tertiary_color;
+}
+@include formDesign;

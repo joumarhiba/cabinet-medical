@@ -1,0 +1,74 @@
+@import 'variables';
+
+@include fontFamily;
+@include h2;
+h1{
+  font-size: 1.7rem !important;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $main-color-gradient;
+  height: 100vh;
+  
+}
+.login{
+  background-color: $white;
+  width: 300px;
+  margin: auto;
+  padding: 10px 0px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 47px -10px black;
+  form{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    input{
+      height: 25px;
+      color: $font_color;
+      font-size: 1.1em;
+      border-radius: 10px;
+      text-align: center;
+      border: none;
+      outline: none;
+      &:focus{
+        border: 1px solid $tertiary_color;
+      }
+    }
+    label{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $secondary_color;
+
+      .fas{
+        color: inherit !important;
+        font-size: 20px;
+        margin-right: 5px;
+      }
+    }
+    input[type="submit"]{
+      @include loginButton;
+    }
+  }
+}
+
+@media (max-width : 768px){
+  h1{
+    font-size: 1.1rem !important;
+  }
+  .login{
+    width: 275px;
+    height: 49%;
+
+    form input{
+      font-size: .9em;
+    }
+  }
+}
+
+

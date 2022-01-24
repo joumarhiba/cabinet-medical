@@ -1,0 +1,103 @@
+@import "./header";
+@import "./footer";
+@import 'variables';
+
+header {
+  background: $main-color-gradient;
+}
+.formulaire{
+  background-color: $secondary-color;
+  border-radius: 20px;
+  width: 90%;
+  margin: auto;
+  padding: 20px 0px;
+  @include formDesign;
+}
+ 
+
+@include h2;
+
+
+.patientsContainer{
+  padding: 0px 10px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  
+  .patient{
+    display: grid;
+    
+    grid-template-columns: 1.2fr 1.2fr .6fr;
+    .f-child,.m-child{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .l-child{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      .sup,.mdf{
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        color: $white;
+        display: block;
+        button{
+          width: 35px;
+          height: 35px;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+      }
+      .sup{
+        button{
+          background-color: #E23C3C;
+        }
+      }
+      .mdf{
+        button{
+          background-color: #3c68e2;
+        }
+      }
+    }
+    .f-child p{
+      background-color: $primary_color;
+      padding: 5px 15px;
+      font-size: 14px;
+      text-align: left;
+      border-radius: 10px;
+      padding-left: 10px;
+      font-weight: 600;
+      color: $white; 
+    }
+    .m-child p{
+      font-size: 14px;
+      padding: 5px 15px ;
+      color: $font_color;
+      font-weight: 400;
+    }
+  }
+}
+@media (max-width: 700px)
+{
+  .patientsContainer{
+    grid-template-columns: 1fr ;
+  }
+  .patient{
+    grid-template-columns: repeat(2,1fr) !important;
+    row-gap: 3px;
+    .l-child{
+      flex-direction: row !important;
+      justify-content: center;
+      grid-column: 1 / span 2;
+    }
+  }
+  .heading{
+    font-size: 18px;
+  }
+}

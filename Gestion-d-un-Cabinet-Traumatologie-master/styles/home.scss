@@ -1,0 +1,270 @@
+@use "./header.scss";
+@use "./footer";
+@import 'variables';
+
+@include h2;
+.bg-svg {
+  position: absolute;
+  top: -46px;
+  width: 85%;
+  z-index: -99;
+}
+.bg-svg .cls-1 {
+  fill: $primary-color;
+}
+
+.top {
+  position: relative;
+  padding-bottom: 44vw;
+  h1 {
+    position: absolute;
+    width: 50%;
+    top: 10vw;
+    padding-left: 5vw;
+    color: $white;
+  }
+  .img-holder {
+    width: max(200px, 18vw);
+    height: max(200px, 18vw);
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 10vw;
+    top: 12vw;
+    img {
+      width: 130%;
+    }
+  }
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  .column {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    h3 {
+      font-weight: bold;
+      color: $tertiary-color;
+      padding-bottom: 5px;
+    }
+    p.text {
+      width: 270px;
+    }
+  }
+}
+.tbib {
+  overflow: hidden;
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  img {
+    width: max(200px, 50%);
+  }
+}
+
+.specialite {
+  padding-bottom: 3px;
+}
+
+.da {
+  h3 {
+    text-align: center;
+    font-weight: bold;
+    color: $tertiary-color;
+    padding-bottom: 30px;
+  }
+  .daFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .daih {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-image: url(../assets/images/skeleton-with-knee-pain.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+    p {
+      width: 30%;
+      padding-left: 6%;
+    }
+  }
+}
+.testimonials {
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    .card {
+      width: 350px;
+
+      .firstPart {
+        border-radius: 15px;
+        background-color: #eceffc;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+        margin-bottom: 5px;
+        img {
+          width: 90px;
+          height: 90px;
+        }
+        p {
+          color: $tertiary-color;
+          font-size: 14px;
+          padding-top: 15px;
+        }
+      }
+      .secondPart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .profilPhoto {
+          background-position: center;
+          background-size: cover;
+          height: 70px;
+          width: 70px;
+          border-radius: 50%;
+        }
+        p {
+          padding-left: 15px;
+          .name {
+            color: $primary-color;
+            font-weight: bold;
+          }
+          .pro {
+            color: $tertiary-color;
+          }
+        }
+        #oliver {
+          background-image: url(../assets/images/oliver-ragfelt.jpg);
+        }
+        #joel {
+          background-image: url(../assets/images/joel-mott.jpg);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .top {
+    h1 {
+      font-size: 23px;
+    }
+  }
+}
+@media screen and (max-width: 780px) {
+  .cards {
+    align-items: center;
+    justify-content: none;
+    flex-direction: column;
+    gap: 30px !important;
+  }
+}
+@media screen and (max-width: 880px) {
+  .bg-svg {
+    width: 100%;
+    top: -5px;
+  }
+  .top {
+    h1 {
+      font-size: 20px;
+    }
+    .img-holder {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .column {
+    width: 100%;
+    h3 {
+      font-size: 16px;
+    }
+    p.text {
+      width: 80% !important;
+      margin: auto !important;
+    }
+  }
+  .text {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .da {
+    .daFlex {
+      flex-direction: column;
+      p {
+        width: 60%;
+        padding: 0 !important;
+        padding-top: 15px !important;
+        text-align: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 570px) {
+  .top {
+    padding-bottom: 50vw;
+    h1 {
+      top: 2px;
+      font-size: 13px;
+      width: 100%;
+      margin: auto;
+    }
+    
+    .heading2 {
+      font-size: 20px;
+      margin-top: 27px;
+  }
+  .top .img-holder img {
+      width: 100%;
+  }
+  }
+  .flex {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .tbib {
+    width: 80%;
+    justify-content: center;
+    img {
+      width: max(200px, 50%);
+    }
+  }
+  .flex {
+    .column {
+      width: 70%;
+    }
+  }
+  h3{
+    font-size: .8em;
+}
+  .testimonials .cards .card .firstPart p {
+    font-size: 12px;
+}
+  .testimonials .cards .card .firstPart img {
+    width: 70px;
+    height: 70px;
+}
+}
+@media screen and (max-width: 500px) {
+  .top{
+    .img-holder{
+        width: 110px !important;
+        height: 110px !important;
+    }
+  }
+}
